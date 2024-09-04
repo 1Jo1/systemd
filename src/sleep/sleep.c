@@ -587,6 +587,7 @@ static int run(int argc, char *argv[]) {
         log_setup();
 
         r = parse_argv(argc, argv);
+        log_info("sleep run()\n");
         if (r <= 0)
                 return r;
 
