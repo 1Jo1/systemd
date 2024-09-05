@@ -223,6 +223,7 @@ static int execute(
         _cleanup_close_ int state_fd = -EBADF;
         int r;
 
+        log_info("execute!\n");
         assert(sleep_config);
         assert(operation >= 0);
         assert(operation < _SLEEP_OPERATION_CONFIG_MAX); /* Others are handled by execute_s2h() instead */
@@ -587,7 +588,7 @@ static int run(int argc, char *argv[]) {
         log_setup();
 
         r = parse_argv(argc, argv);
-        log_info("sleep run()\n");
+        log_info("sleep run()!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n");
         if (r <= 0)
                 return r;
 
